@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+    <!--<propertyPlaceHolder location="jdbc.properties"></propertyPlaceHolder>
+    <dataSourse>
+        <property name="driverClass" value="${jdbc.Driver}"></property>
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </dataSourse>-->
+
+
+    <dataSourse>
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/test?serverTimezone=UTC"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="innosen"></property>
+    </dataSourse>
+
+    <mappers>
+        <mapper resource="mapper/UserMapper.xml" />
+    </mappers>
+
+</configuration>

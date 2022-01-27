@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.tabwu.wu.mapper.UserMapper">
+
+    <insert id="add" parameterType="com.tabwu.wu.entity.User" resultType="com.tabwu.wu.entity.User">
+        insert into user (username, password) values (#{username}, #{password})
+    </insert>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from user where id = #{id}
+    </delete>
+
+    <update id="update" parameterType="com.tabwu.wu.entity.User">
+        update user where id = #{id}
+    </update>
+
+    <select id="selectById" parameterType="java.lang.Integer" resultType="com.tabwu.wu.entity.User">
+        select id, username, password from user where id = #{id}
+    </select>
+
+    <select id="findByUsername" parameterType="java.lang.String" resultType="com.tabwu.wu.entity.User">
+        select id, username, password from user where username = #{username}
+    </select>
+
+    <select id="selectList" resultType="com.tabwu.wu.entity.User">
+        select id, username, password from user
+    </select>
+
+</mapper>
+
